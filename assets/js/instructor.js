@@ -103,6 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // ==================== 表單處理 ====================
     const contactForm = document.getElementById('contactForm');
     
+    if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
@@ -124,6 +125,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // 重置表單
         contactForm.reset();
     });
+    }
     
     // ==================== 滾動動畫 ====================
     const observerOptions = {
@@ -142,7 +144,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // 為需要動畫的元素添加初始樣式和觀察
     const animatedElements = document.querySelectorAll(
-        '.course-card, .expertise-card, .stat-card, .testimonial-card'
+        '.course-card, .expertise-card, .stat-card, .testimonial-card, .case-card'
     );
     
     animatedElements.forEach((el, index) => {

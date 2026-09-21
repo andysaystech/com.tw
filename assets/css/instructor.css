@@ -11,6 +11,13 @@
     --bg-white: #ffffff;
     --bg-light: #f9fafb;
     --bg-gray: #f3f4f6;
+    --card-bg: #ffffff;
+    --nav-bg: rgba(255, 255, 255, 0.95);
+    --footer-bg: #1f2937;
+    --toast-bg: #1f2937;
+    --toast-text: #ffffff;
+    --placeholder-bg: #eef2ff;
+    --placeholder-text: #6366f1;
     --border-color: #e5e7eb;
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
     --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -19,6 +26,40 @@
     --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
     --gradient-tech: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+html[data-theme="dark"] {
+    --primary-color: #818cf8;
+    --primary-dark: #6366f1;
+    --primary-light: #a5b4fc;
+    --secondary-color: #34d399;
+    --accent-color: #fbbf24;
+    --text-primary: #f3f4f6;
+    --text-secondary: #cbd5e1;
+    --text-light: #94a3b8;
+    --bg-white: #0f172a;
+    --bg-light: #111827;
+    --bg-gray: #1e293b;
+    --card-bg: #1e293b;
+    --nav-bg: rgba(15, 23, 42, 0.94);
+    --footer-bg: #020617;
+    --toast-bg: #e5e7eb;
+    --toast-text: #111827;
+    --placeholder-bg: #1e1b4b;
+    --placeholder-text: #c7d2fe;
+    --border-color: #334155;
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.45);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.5);
+}
+
+html {
+    color-scheme: light;
+}
+
+html[data-theme="dark"] {
+    color-scheme: dark;
 }
 
 * {
@@ -38,6 +79,7 @@ body {
     color: var(--text-primary);
     background-color: var(--bg-white);
     overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .container {
@@ -52,7 +94,7 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(255, 255, 255, 0.95);
+    background: var(--nav-bg);
     backdrop-filter: blur(10px);
     box-shadow: var(--shadow-sm);
     z-index: 1000;
@@ -68,6 +110,69 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 0;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.theme-toggle {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 2px solid var(--border-color);
+    background: var(--card-bg);
+    color: var(--text-primary);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.05rem;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.theme-toggle:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    transform: rotate(12deg);
+}
+
+.theme-toggle .fa-sun {
+    display: none;
+}
+
+html[data-theme="dark"] .theme-toggle .fa-sun {
+    display: inline-block;
+}
+
+html[data-theme="dark"] .theme-toggle .fa-moon {
+    display: none;
+}
+
+.theme-toast {
+    position: fixed;
+    top: 88px;
+    right: 24px;
+    z-index: 2000;
+    background: var(--toast-bg);
+    color: var(--toast-text);
+    padding: 0.75rem 1.25rem;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    box-shadow: var(--shadow-lg);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-8px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.theme-toast.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .logo {
@@ -297,7 +402,7 @@ body {
 }
 
 .btn-primary {
-    background: white;
+    background: #ffffff;
     color: var(--primary-color);
 }
 
@@ -313,7 +418,7 @@ body {
 }
 
 .btn-secondary:hover {
-    background: white;
+    background: #ffffff;
     color: var(--primary-color);
 }
 
@@ -515,6 +620,114 @@ section {
     color: var(--text-secondary);
 }
 
+/* ==================== 導入經驗 ==================== */
+.automation {
+    background: var(--bg-light);
+}
+
+.case-year {
+    margin-bottom: 4rem;
+}
+
+.case-year:last-child {
+    margin-bottom: 0;
+}
+
+.case-year-title {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 1.75rem;
+}
+
+.case-year-title::after {
+    content: '';
+    display: block;
+    width: 56px;
+    height: 4px;
+    border-radius: 4px;
+    background: var(--gradient-primary);
+}
+
+.case-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
+}
+
+.case-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.case-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-xl);
+}
+
+.case-visual {
+    height: 180px;
+    background: var(--placeholder-bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    color: var(--placeholder-text);
+    border-bottom: 1px dashed var(--border-color);
+}
+
+.case-visual i {
+    font-size: 2.25rem;
+}
+
+.case-visual span {
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.case-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.case-body {
+    padding: 1.5rem 1.5rem 1.75rem;
+}
+
+.case-tag {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: var(--bg-light);
+    color: var(--primary-color);
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.case-body h4 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+}
+
+.case-body p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.75;
+}
+
 /* ==================== 課程內容 ==================== */
 .courses {
     background: var(--bg-light);
@@ -527,7 +740,7 @@ section {
 }
 
 .course-category {
-    background: white;
+    background: var(--card-bg);
     border-radius: 30px;
     padding: 3rem;
     box-shadow: var(--shadow-lg);
@@ -642,7 +855,7 @@ section {
 
 /* ==================== 專業證照 ==================== */
 .certificates {
-    background: white;
+    background: var(--bg-white);
 }
 
 .cert-tabs {
@@ -656,7 +869,7 @@ section {
 .cert-tab {
     padding: 0.75rem 1.5rem;
     border: 2px solid var(--border-color);
-    background: white;
+    background: var(--card-bg);
     border-radius: 50px;
     font-size: 0.9rem;
     font-weight: 600;
@@ -704,7 +917,7 @@ section {
 }
 
 .cert-item {
-    background: white;
+    background: var(--card-bg);
     border-radius: 15px;
     overflow: hidden;
     box-shadow: var(--shadow-md);
@@ -733,7 +946,7 @@ section {
 
 /* ==================== 作品集 ==================== */
 .portfolio {
-    background: white;
+    background: var(--bg-white);
 }
 
 .portfolio-tabs {
@@ -747,7 +960,7 @@ section {
 .portfolio-tab {
     padding: 0.75rem 1.5rem;
     border: 2px solid var(--border-color);
-    background: white;
+    background: var(--card-bg);
     border-radius: 50px;
     font-size: 0.9rem;
     font-weight: 600;
@@ -774,7 +987,7 @@ section {
 }
 
 .portfolio-item {
-    background: white;
+    background: var(--card-bg);
     border-radius: 15px;
     overflow: hidden;
     box-shadow: var(--shadow-md);
@@ -847,7 +1060,7 @@ section {
     align-items: center;
     gap: 0.5rem;
     padding: 0.75rem 1.5rem;
-    background: white;
+    background: #ffffff;
     color: var(--primary-color);
     border-radius: 50px;
     text-decoration: none;
@@ -906,7 +1119,7 @@ section {
 }
 
 .blog-card {
-    background: white;
+    background: var(--card-bg);
     border-radius: 20px;
     overflow: hidden;
     box-shadow: var(--shadow-md);
@@ -1036,7 +1249,7 @@ section {
 
 .coming-soon-overlay span {
     padding: 1rem 2rem;
-    background: white;
+    background: var(--card-bg);
     color: var(--text-primary);
     border-radius: 50px;
     font-weight: 700;
@@ -1063,7 +1276,7 @@ section {
     align-items: center;
     gap: 0.5rem;
     padding: 0.75rem 1.5rem;
-    background: white;
+    background: var(--card-bg);
     border: 2px solid var(--border-color);
     border-radius: 50px;
     color: var(--text-primary);
@@ -1079,7 +1292,7 @@ section {
 }
 
 .article-full {
-    background: white;
+    background: var(--card-bg);
     border-radius: 20px;
     padding: 3rem;
     box-shadow: var(--shadow-lg);
@@ -1303,7 +1516,7 @@ section {
 
 .feature-tag {
     padding: 0.375rem 0.75rem;
-    background: white;
+    background: var(--card-bg);
     border-radius: 50px;
     font-size: 0.8rem;
     color: var(--text-secondary);
@@ -1316,6 +1529,31 @@ section {
     border-radius: 10px;
     padding: 1.5rem;
     margin: 2rem 0;
+}
+
+html[data-theme="dark"] .tips-box {
+    background: #3f2f0f;
+}
+
+html[data-theme="dark"] .case-study {
+    background: #0c2a3d;
+}
+
+html[data-theme="dark"] .comparison-box,
+html[data-theme="dark"] .workflow-box {
+    background: #2a2248;
+}
+
+html[data-theme="dark"] .summary-box {
+    background: #0f3b2e;
+}
+
+html[data-theme="dark"] .action-box {
+    background: #3b1515;
+}
+
+html[data-theme="dark"] .closing-box {
+    background: #2d1b3d;
 }
 
 .case-study {
@@ -1355,7 +1593,7 @@ section {
 
 .tips-box code {
     display: block;
-    background: white;
+    background: var(--card-bg);
     padding: 1rem;
     border-radius: 8px;
     font-family: 'Courier New', monospace;
@@ -1455,7 +1693,7 @@ section {
 }
 
 .stat-card {
-    background: white;
+    background: var(--card-bg);
     border-radius: 20px;
     padding: 2.5rem;
     display: flex;
@@ -1487,7 +1725,7 @@ section {
 }
 
 .stat-icon-avatar {
-    background: white !important;
+    background: var(--card-bg) !important;
     padding: 0 !important;
     overflow: hidden;
 }
@@ -1524,7 +1762,7 @@ section {
 }
 
 .testimonial-card {
-    background: white;
+    background: var(--card-bg);
     border-radius: 20px;
     padding: 2.5rem;
     box-shadow: var(--shadow-md);
@@ -1621,6 +1859,15 @@ section {
     gap: 0.5rem;
 }
 
+.review-source a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.review-source a:hover {
+    text-decoration: underline;
+}
+
 .review-source::before {
     content: '';
     width: 20px;
@@ -1642,7 +1889,7 @@ section {
     gap: 0.5rem;
     margin-top: 1rem;
     padding: 0.75rem 1.5rem;
-    background: white;
+    background: var(--card-bg);
     color: #4285f4;
     text-decoration: none;
     border-radius: 50px;
@@ -1660,7 +1907,7 @@ section {
 
 /* ==================== 聯絡方式 ==================== */
 .contact {
-    background: white;
+    background: var(--bg-white);
 }
 
 .contact-content {
@@ -1783,7 +2030,7 @@ section {
     font-size: 1rem;
     font-family: inherit;
     transition: all 0.3s ease;
-    background: white;
+    background: var(--card-bg);
 }
 
 .form-group input:focus,
@@ -1801,7 +2048,7 @@ section {
 
 /* ==================== 頁尾 ==================== */
 .footer {
-    background: var(--text-primary);
+    background: var(--footer-bg);
     color: white;
     padding: 4rem 0 2rem;
 }
@@ -1998,6 +2245,10 @@ section {
         grid-template-columns: 1fr;
         gap: 3rem;
     }
+
+    .case-grid {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 /* 手機 */
@@ -2020,12 +2271,13 @@ section {
         top: 70px;
         left: -100%;
         flex-direction: column;
-        background: white;
+        background: var(--card-bg);
         width: 100%;
         padding: 2rem;
         box-shadow: var(--shadow-lg);
         transition: left 0.3s ease;
         gap: 0;
+        z-index: 999;
     }
     
     .nav-menu.active {
@@ -2086,6 +2338,16 @@ section {
     
     .section-subtitle {
         font-size: 1rem;
+    }
+
+    .case-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .theme-toast {
+        right: 15px;
+        left: 15px;
+        text-align: center;
     }
     
     /* 課程卡片 */
