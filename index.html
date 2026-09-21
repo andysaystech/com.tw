@@ -6,10 +6,16 @@
     <meta name="description" content="Andy - 智日未來科技 AI 轉型顧問暨講師，專精AI應用、程式教育、資料分析與教學遊戲開發">
     <meta name="keywords" content="Andy, AndySaysTech, AI教育, Python教學, JavaScript遊戲, AI應用, 智日未來科技, 程式教育">
     <meta name="author" content="Andy">
-    <title>Andy | AI應用與程式教育專家</title>
+    <title>Andy | AI 轉型顧問暨講師</title>
     <link rel="icon" type="image/png" href="images/AST.png">
     <link rel="stylesheet" href="assets/css/instructor.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        (function () {
+            var saved = localStorage.getItem('theme');
+            document.documentElement.setAttribute('data-theme', saved === 'dark' ? 'dark' : 'light');
+        })();
+    </script>
 </head>
 <body>
     <!-- 導航列 -->
@@ -20,18 +26,25 @@
                     <img src="images/AST.png" alt="Andy" class="logo-avatar">
                     <span>Andy</span>
                 </div>
-                <button class="mobile-menu-toggle" id="mobileMenuToggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="#home" class="nav-link">首頁</a></li>
-                    <li><a href="#about" class="nav-link">關於我</a></li>
-                    <li><a href="#certificates" class="nav-link">專業證照</a></li>
-                    <li><a href="#portfolio" class="nav-link">作品集</a></li>
-                    <li><a href="#achievements" class="nav-link">教學成果</a></li>
-                </ul>
+                <div class="nav-right">
+                    <ul class="nav-menu" id="navMenu">
+                        <li><a href="#home" class="nav-link">首頁</a></li>
+                        <li><a href="#about" class="nav-link">關於我</a></li>
+                        <li><a href="#automation" class="nav-link">導入經驗</a></li>
+                        <li><a href="#achievements" class="nav-link">教學成果</a></li>
+                        <li><a href="#certificates" class="nav-link">專業證照</a></li>
+                        <li><a href="#portfolio" class="nav-link">作品集</a></li>
+                    </ul>
+                    <button class="theme-toggle" id="themeToggle" type="button" aria-label="切換深淺色模式" title="切換深淺色模式">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                    </button>
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
             </div>
         </div>
     </nav>
@@ -61,12 +74,12 @@
                 </h1>
                 <p class="hero-subtitle">
                     智日未來科技 AI 轉型顧問暨講師<br>
-                    專精於AI應用、程式教育與遊戲開發
+                    專精於 AI 導入顧問與 AI 應用教育
                 </p>
                 <div class="hero-buttons">
                     <a href="#about" class="btn btn-primary">
                         <i class="fas fa-rocket"></i>
-                        認識講師
+                        認識顧問講師
                     </a>
                 </div>
             </div>
@@ -81,8 +94,8 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">About Me</span>
-                <h2 class="section-title">關於講師</h2>
-                <p class="section-subtitle">融合教育熱忱與科技專業，打造最適合的學習體驗</p>
+                <h2 class="section-title">關於顧問講師</h2>
+                <p class="section-subtitle">融合教育熱忱與科技專業，打造最適合的導入與學習體驗</p>
             </div>
             <div class="about-content">
                 <div class="about-image">
@@ -99,7 +112,7 @@
                         <p>
                             畢業於政治大學圖書資訊與檔案學研究所，擁有紮實的資訊科學背景。
                             目前擔任智日未來科技 AI 轉型顧問暨講師，擅長科技應用、資料蒐集、視覺化分析、分層式引導教學。
-                            曾任職於台灣微軟雲端服務部門，致力於AI應用與程式教育，開發多款課程教材與教學遊戲。
+                            曾任職於台灣微軟雲端服務部門，致力於 AI 導入顧問與 AI 應用教育，輔導過多家企業進行 AI 轉型。
                         </p>
                     </div>
                     <div class="about-highlights">
@@ -109,7 +122,7 @@
                             </div>
                             <div class="highlight-content">
                                 <h4>學術背景</h4>
-                                <p>政治大學圖書資訊與檔案學研究所、淡江大學資圖系</p>
+                                <p>政治大學圖書資訊與檔案學研究所</p>
                             </div>
                         </div>
                         <div class="highlight-item">
@@ -126,8 +139,8 @@
                                 <i class="fas fa-robot"></i>
                             </div>
                             <div class="highlight-content">
-                                <h4>AI 自動化顧問</h4>
-                                <p>2026年起：漫步旅居、岱鐠、瑟鎂<br>2025年起：映誠、智食良果、金益鼎</p>
+                                <h4>AI 自動化導入顧問</h4>
+                                <p>2026年：漫步旅居、岱鐠、瑟鎂<br>2025年：映誠、智食良果、金益鼎</p>
                             </div>
                         </div>
                         <div class="highlight-item">
@@ -139,14 +152,14 @@
                                 <p>
                                     <strong>交通運輸</strong>：台灣高鐵(THSRC)<br>
                                     <strong>研究機構</strong>：紡織所(TTRI)、台灣經濟研究院七所(TIER)<br>
-                                    <strong>製造工業</strong>：邑昇實業(EISO/DOSUN)、豐營工業(FUNG YIN)、建凱機電(LONG SHINE)、第一傳動(TiMOTION)、和成欣業(HCG)、森永企業(FREE BIRD)、岳豐科技(YFC-BONEAGLE)<br>
-                                    <strong>金融保險</strong>：和泰產險(HOTAI INSURANCE)<br>
-                                    <strong>餐飲食品</strong>：百鮮企(LINCO-FOOD)、振鈁阿中丸子(ZHEN FANG/A CHUN WAN NA)、荖子鍋(LAOZI HOT POT)、橙姑娘(ORANGELADY)<br>
-                                    <strong>科技新創</strong>：映誠(YING CHERNG)、柏利金(POLIKIN)<br>
+                                    <strong>製造工業</strong>：伯堅股份(BURGEON)、允越科技(YUN YUE TECH)、岱鐠科技(DediProg)、安諾電子(ATC)、河洛半導體(HI-LO SYSTEM)、邑昇實業(EISO/DOSUN)、豐營工業(FUNG YIN)、建凱機電(LONG SHINE)、第一傳動(TiMOTION)、和成欣業(HCG)、森永企業(FREE BIRD)、岳豐科技(YFC-BONEAGLE)<br>
+                                    <strong>金融保險</strong>：國泰人壽(CATHAY LIFE)、和泰產險(HOTAI INSURANCE)<br>
+                                    <strong>餐飲食品</strong>：客來喜(LA CREACION)、百鮮企(LINCO-FOOD)、振鈁阿中丸子(ZHEN FANG/A CHUN WAN NA)、荖子鍋(LAOZI HOT POT)、橙姑娘(ORANGELADY)<br>
+                                    <strong>廣告行銷</strong>：侒可傳媒(ANKE MEDIA)、迷母豐盛(MEMES)、映誠(YING CHERNG)、柏利金(POLIKIN)<br>
                                     <strong>教育培訓</strong>：104人資學院(104)、紅人學院(TCTA)、全國創新創業總會(NiEA)<br>
-                                    <strong>醫療社福</strong>：全國物理治療總會(TPTA)、心路基金會(SYIN LU)、雲林輔具資源中心(YLAD YUNLIN)<br>
-                                    <strong>產業公會</strong>：台灣塑膠公會(TTPIA)、花蓮工業會(HCIA)、桃園工業會(TCIA)、新竹工業會(HCIA)<br>
-                                    <strong>旅宿服務</strong>：漫步旅居(MEANDER Group)
+                                    <strong>醫療社福</strong>：新活藝術(NAAS)、全國物理治療總會(TPTA)、心路基金會(SYIN LU)、雲林輔具資源中心(YLAD YUNLIN)<br>
+                                    <strong>產業公會</strong>：桃園工策會(T.IDIPC)、台灣塑膠公會(TTPIA)、花蓮工業會(HCIA)、桃園工業會(TCIA)、新竹工業會(HCIA)<br>
+                                    <strong>旅宿服務</strong>：漫步旅居(MEANDER GROUP)
                                 </p>
                             </div>
                         </div>
@@ -158,7 +171,8 @@
                                 <h4>學生端授課單位</h4>
                                 <p>
                                     <strong>高等教育</strong>：台科大(NTUST)<br>
-                                    <strong>文教機構</strong>：吉德堡儒林文教(KIDCASTLE RULIN)、育苗國際文教(YU MIAO/WINWIN)、新主流實驗學校(STARLANDEDU)、濯亞國際學院(RUAH)、何嘉仁國際文教(HESS)
+                                    <strong>實驗學校</strong>：新主流實驗學校(STARLANDEDU)、濯亞國際學院(RUAH)<br>
+                                    <strong>文教機構</strong>：吉德堡儒林文教(KIDCASTLE RULIN)、育苗國際文教(YU MIAO/WINWIN)、何嘉仁國際文教(HESS)
                                 </p>
                             </div>
                         </div>
@@ -177,6 +191,88 @@
         </div>
     </section>
 
+    <!-- 導入經驗 -->
+    <section id="automation" class="automation">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Automation</span>
+                <h2 class="section-title">導入經驗</h2>
+                <p class="section-subtitle">把看不見的流程變清楚，讓團隊把時間花在真正創造價值的事</p>
+            </div>
+
+            <div class="case-year">
+                <h3 class="case-year-title">2026</h3>
+                <div class="case-grid">
+                    <article class="case-card">
+                        <div class="case-visual">
+                            <img src="./images/人資績效考核系統.png" alt="人資績效考核系統">
+                        </div>
+                        <div class="case-body">
+                            <span class="case-tag">人資 × 績效</span>
+                            <h4>漫步旅居</h4>
+                            <p>導入 360 度績效考核與人資系統，審查進度不再卡住、不再猜。搭配組織圖，全員一眼看懂公司架構，考核與溝通都更順。</p>
+                        </div>
+                    </article>
+                    <article class="case-card">
+                        <div class="case-visual">
+                            <img src="./images/信件辨識建單自動化.png" alt="信件辨識建單自動化">
+                        </div>
+                        <div class="case-body">
+                            <span class="case-tag">信件辨識 × 建單</span>
+                            <h4>岱鐠</h4>
+                            <p>客戶來信自動辨識、系統建檔一次到位。業助少轉手、建單更快，IC 封裝需求從信件到進單一路順暢。</p>
+                        </div>
+                    </article>
+                    <article class="case-card">
+                        <div class="case-visual">
+                            <img src="./images/庫存營運儀錶板.png" alt="庫存營運儀錶板">
+                        </div>
+                        <div class="case-body">
+                            <span class="case-tag">庫存 × 營運介面</span>
+                            <h4>瑟鎂</h4>
+                            <p>重構內部庫存管理與介面顯示，庫存看得見、操作跟得上。讓日常營運少繞路，企業內部效率直接拉上來。</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div class="case-year">
+                <h3 class="case-year-title">2025</h3>
+                <div class="case-grid">
+                    <article class="case-card">
+                        <div class="case-visual">
+                            <img src="./images/進銷存自動化.png" alt="進銷存自動化">
+                        </div>
+                        <div class="case-body">
+                            <span class="case-tag">進銷存自動化</span>
+                            <h4>映誠</h4>
+                            <p>進貨單自動識別解析、出貨單自動生成，庫存資料同步進資料庫。從紙本到系統，營運節奏更快、更準。</p>
+                        </div>
+                    </article>
+                    <article class="case-card">
+                        <div class="case-visual">
+                            <img src="./images/智慧農業監管系統.png" alt="智慧農業監管系統">
+                        </div>
+                        <div class="case-body">
+                            <span class="case-tag">智慧農業 × LINE</span>
+                            <h4>智食良果</h4>
+                            <p>用熟悉的 LINE 介面監控、控制智慧農業設備。田間少跑一趟、狀態隨時掌握，農產效率明顯提升。</p>
+                        </div>
+                    </article>
+                    <article class="case-card">
+                        <div class="case-visual">
+                            <img src="./images/業務報告書自動化.png" alt="業務報告書自動化">
+                        </div>
+                        <div class="case-body">
+                            <span class="case-tag">報告書自動化</span>
+                            <h4>金益鼎</h4>
+                            <p>任務現場照片自動識別分類，再依任務資訊產出對應報告書。行政文書從慢慢整理，變成一次成形。</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- 教學成果 -->
     <section id="achievements" class="achievements">
         <div class="container">
@@ -184,9 +280,6 @@
                 <span class="section-tag">Achievements</span>
                 <h2 class="section-title">教學成果</h2>
                 <p class="section-subtitle">學員的成長與成就，是我最大的驕傲</p>
-                <a href="https://www.google.com/maps/place/%E7%91%9E%E6%AF%94%E6%99%BA%E6%85%A7%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8+airabbi+%2F+CodingBar/@25.0415706,121.5337444,17z/data=!4m8!3m7!1s0x3442a9bc89c7b333:0xd39313f859bc9d88!8m2!3d25.0415706!4d121.5363193!9m1!1b1!16s%2Fg%2F11kl2f_qr_?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoKLDEwMDc5MjA3MUgBUAM%3D" target="_blank" class="google-reviews-link">
-                    <i class="fab fa-google"></i> 查看更多 Google 評論
-                </a>
             </div>
             <div class="achievements-content">
                 <div class="achievement-stats">
@@ -204,7 +297,7 @@
                             <i class="fas fa-users"></i>
                         </div>
                         <div class="stat-info">
-                            <div class="stat-value">6500+</div>
+                            <div class="stat-value">8500+</div>
                             <div class="stat-label">學員人次</div>
                         </div>
                     </div>
@@ -235,7 +328,7 @@
                                 <i class="fab fa-google"></i>
                             </div>
                             <div class="author-info">
-                                <div class="author-name">學員評價</div>
+                                <div class="author-name">企業黃姓學員</div>
                                 <div class="review-stars">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -246,10 +339,14 @@
                             </div>
                         </div>
                         <p class="testimonial-text">
-                            Andy教學認真，課程內容豐富實用，從基礎到進階都講解得很清楚。
-                            特別是AI應用的部分，讓我在工作上能夠實際運用，大幅提升效率！
+                            今天上了Andy老師的基礎課程，
+                            對剛開始接觸這個領域的我來說，真的收穫滿滿。
+                            
+                            老師把原本覺得有點難懂的概念，講得很清楚又有邏輯，
+                            加上課堂氣氛輕鬆有趣，讓我整堂課都很投入。
+                            很感謝Andy老師的用心教學！
                         </p>
-                        <div class="review-source">來自 Google 評論</div>
+                        <div class="review-source" target="_blank"><a href="https://maps.app.goo.gl/czNH1p9fo5UaxrpX8" target="_blank">來自 Google 評論</a></div>
                     </div>
 
                     <!-- Google評論 2 -->
@@ -259,7 +356,7 @@
                                 <i class="fab fa-google"></i>
                             </div>
                             <div class="author-info">
-                                <div class="author-name">家長推薦</div>
+                                <div class="author-name">企業劉姓學員</div>
                                 <div class="review-stars">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -270,10 +367,11 @@
                             </div>
                         </div>
                         <p class="testimonial-text">
-                            孩子很喜歡Andy的程式課程，從原本對程式一竅不通，
-                            到現在可以自己設計小遊戲，進步非常明顯。老師很有耐心，教學方式生動有趣！
+                            這位安迪 AI 講師的內容深入淺出，能將複雜的人工智慧概念以生活化的例子說明，讓學員容易理解並實際應用。
+                            課程節奏掌握得宜，理論與實作兼具，講解過程中也善於引導思考與互動，激發學習興趣。
+                            整體而言，是一位兼具專業與親和力的優秀講師，讓人對 AI 的學習更有信心與動力。
                         </p>
-                        <div class="review-source">來自 Google 評論</div>
+                        <div class="review-source" target="_blank"><a href="https://maps.app.goo.gl/jz5RDsStE3PMHtuu7" target="_blank">來自 Google 評論</a></div>
                     </div>
 
                     <!-- Google評論 3 -->
@@ -283,7 +381,7 @@
                                 <i class="fab fa-google"></i>
                             </div>
                             <div class="author-info">
-                                <div class="author-name">企業學員</div>
+                                <div class="author-name">企業廖姓學員</div>
                                 <div class="review-stars">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -294,10 +392,82 @@
                             </div>
                         </div>
                         <p class="testimonial-text">
-                            公司安排的AI培訓課程，Andy講解專業又實用，
-                            不只是理論，更多的是實際操作和案例分享，讓我們能夠快速上手應用在工作中。
+                            課程內容很實用，可以即時應用到工作中，
+                            Andy老師應用很多實例很有耐心帶大家操作，課程資源也準備地很豐富，謝謝老師
                         </p>
-                        <div class="review-source">來自 Google 評論</div>
+                        <div class="review-source" target="_blank"><a href="https://maps.app.goo.gl/vU83co4ienUhidAJ7" target="_blank">來自 Google 評論</a></div>
+                    </div>
+
+                    <!-- Google評論 4 -->
+                    <div class="testimonial-card google-review">
+                        <div class="review-header">
+                            <div class="author-avatar">
+                                <i class="fab fa-google"></i>
+                            </div>
+                            <div class="author-info">
+                                <div class="author-name">企業朱姓學員</div>
+                                <div class="review-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">
+                            充實的課程！Andy是非常棒的講師，關注到每一位學員的狀況與需求，
+                            積極幫助大家解決問題～大推～
+                        </p>
+                        <div class="review-source" target="_blank"><a href="https://maps.app.goo.gl/CjCLKJmo1UVnMQ4G8" target="_blank">來自 Google 評論</a></div>
+                    </div>
+
+                    <!-- Google評論 5 -->
+                    <div class="testimonial-card google-review">
+                        <div class="review-header">
+                            <div class="author-avatar">
+                                <i class="fab fa-google"></i>
+                            </div>
+                            <div class="author-info">
+                                <div class="author-name">企業葉姓學員</div>
+                                <div class="review-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">
+                            Andy老師非常專業，講解很清楚，課堂中也隨時關注學員有沒有跟上進度，
+                            還有助教會協助排除學員課堂中發生的問題，整體專業且態度親切有耐心！
+                        </p>
+                        <div class="review-source" target="_blank"><a href="https://maps.app.goo.gl/GGADq7cLJJ8BarB48" target="_blank">來自 Google 評論</a></div>
+                    </div>
+                    
+                    <!-- Google評論 6 -->
+                    <div class="testimonial-card google-review">
+                        <div class="review-header">
+                            <div class="author-avatar">
+                                <i class="fab fa-google"></i>
+                            </div>
+                            <div class="author-info">
+                                <div class="author-name">更多 Google 評論</div>
+                                <div class="review-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">
+                            <a href="https://www.google.com/maps/place/%E7%91%9E%E6%AF%94%E6%99%BA%E6%85%A7%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8+airabbi+%2F+CodingBar/@25.0415706,121.5337444,17z/data=!4m8!3m7!1s0x3442a9bc89c7b333:0xd39313f859bc9d88!8m2!3d25.0415706!4d121.5363193!9m1!1b1!16s%2Fg%2F11kl2f_qr_?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoKLDEwMDc5MjA3MUgBUAM%3D" target="_blank" class="google-reviews-link">
+                                <i class="fab fa-google"></i> 查看更多 Google 評論
+                            </a>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -315,7 +485,7 @@
             
             <!-- 證照分類標籤 -->
             <div class="cert-tabs">
-                <button class="cert-tab active" data-cert-category="programming">AI程式類</button>
+                <button class="cert-tab active" data-cert-category="programming">AI 程式類</button>
                 <button class="cert-tab" data-cert-category="office">文書處理類</button>
                 <button class="cert-tab" data-cert-category="design">影像設計類</button>
                 <button class="cert-tab" data-cert-category="marketing">行銷管理類</button>
@@ -326,6 +496,14 @@
             <div class="cert-content">
                 <!-- AI程式類 -->
                 <div class="cert-grid active" data-cert-group="programming">
+                    <div class="cert-item">
+                        <img src="images/license/IPAS AI應用規劃師中級.png" alt="IPAS AI應用規劃師中級">
+                        <p class="cert-name">IPAS AI應用規劃師中級</p>
+                    </div>
+                    <div class="cert-item">
+                        <img src="images/license/IPAS AI應用規劃師初級.png" alt="IPAS AI應用規劃師初級">
+                        <p class="cert-name">IPAS AI應用規劃師初級</p>
+                    </div>
                     <div class="cert-item">
                         <img src="images/license/Generative Al for Educators with Gemini Certificate.jpg" alt="Generative AI for Educators with Gemini Certificate">
                         <p class="cert-name">Generative AI for Educators with Gemini</p>
@@ -431,8 +609,8 @@
             <!-- 作品分類標籤 -->
             <div class="portfolio-tabs">
                 <button class="portfolio-tab active" data-category="all">全部作品</button>
-                <button class="portfolio-tab" data-category="games">遊戲開發</button>
                 <button class="portfolio-tab" data-category="websites">網站作品</button>
+                <button class="portfolio-tab" data-category="games">遊戲開發</button>
                 <button class="portfolio-tab" data-category="design">設計作品</button>
                 <button class="portfolio-tab" data-category="videos">影片作品</button>
                 <button class="portfolio-tab" data-category="academic">學術研究</button>
@@ -440,7 +618,86 @@
 
             <!-- 作品展示區 -->
             <div class="portfolio-grid">
-                <!-- Python遊戲作品 -->
+                <div class="portfolio-item" data-category="websites">
+                    <div class="portfolio-image">
+                        <img src="images/work/work116.jpg" alt="Andy新北輕軌即時時刻">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-overlay-content">
+                                <h3>Andy新北輕軌即時時刻</h3>
+                                <p>新北輕軌各站發車時刻查詢</p>
+                                <a href="https://andysaystech.github.io/newtaipeilrt.com.tw/" target="_blank" class="portfolio-link">
+                                    <i class="fas fa-external-link-alt"></i> 查看作品
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-category">前端工具</span>
+                        <h4>Andy新北輕軌即時時刻</h4>
+                        <p>提供淡海、安坑輕軌各站發車時刻，支援平日／假日自動切換</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="websites">
+                    <div class="portfolio-image">
+                        <img src="images/work/work115.jpg" alt="Andy百寶箱">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-overlay-content">
+                                <h3>Andy百寶箱</h3>
+                                <p>整合多種實用工具的網頁工具箱</p>
+                                <a href="https://andysaystech.github.io/tools.com.tw/" target="_blank" class="portfolio-link">
+                                    <i class="fas fa-external-link-alt"></i> 查看作品
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-category">前端工具</span>
+                        <h4>Andy百寶箱</h4>
+                        <p>整合抽抽樂、計數、時間管理、匯率轉換、待辦清單等日常實用工具</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="websites">
+                    <div class="portfolio-image">
+                        <img src="images/work/work101.jpg" alt="浩瀚宇宙遊戲平台">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-overlay-content">
+                                <h3>浩瀚宇宙遊戲平台</h3>
+                                <p>完整的購物網站系統</p>
+                                <a href="http://220.132.73.120/Andy_works/Game_Store/" target="_blank" class="portfolio-link">
+                                    <i class="fas fa-external-link-alt"></i> 查看作品
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-category">全端網站</span>
+                        <h4>浩瀚宇宙遊戲平台</h4>
+                        <p>包含商品查詢、購物車、會員系統等功能</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="websites">
+                    <div class="portfolio-image">
+                        <img src="images/work/work102.JPG" alt="惡靈古堡資料庫">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-overlay-content">
+                                <h3>惡靈古堡資料庫</h3>
+                                <p>遊戲及電影資料庫網站</p>
+                                <a href="http://220.132.73.120/Andy_works/Resident_Evil/" target="_blank" class="portfolio-link">
+                                    <i class="fas fa-external-link-alt"></i> 查看作品
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-category">全端網站</span>
+                        <h4>惡靈古堡資料庫</h4>
+                        <p>包含電影列表、遊戲列表、討論區等功能</p>
+                    </div>
+                </div>
+
                 <div class="portfolio-item" data-category="games">
                     <div class="portfolio-image">
                         <img src="images/work/work103.jpg" alt="宇宙大冒險">
@@ -521,7 +778,6 @@
                     </div>
                 </div>
 
-                <!-- JavaScript遊戲作品 -->
                 <div class="portfolio-item" data-category="games">
                     <div class="portfolio-image">
                         <img src="images/work/work109.jpg" alt="打蚊子遊戲">
@@ -622,88 +878,6 @@
                     </div>
                 </div>
 
-                <!-- 網站作品 -->
-                <div class="portfolio-item" data-category="websites">
-                    <div class="portfolio-image">
-                        <img src="images/work/work101.jpg" alt="浩瀚宇宙遊戲平台">
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-overlay-content">
-                                <h3>浩瀚宇宙遊戲平台</h3>
-                                <p>完整的購物網站系統</p>
-                                <a href="http://220.132.73.120/Andy_works/Game_Store/" target="_blank" class="portfolio-link">
-                                    <i class="fas fa-external-link-alt"></i> 查看作品
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="portfolio-info">
-                        <span class="portfolio-category">全端網站</span>
-                        <h4>浩瀚宇宙遊戲平台</h4>
-                        <p>包含商品查詢、購物車、會員系統等功能</p>
-                    </div>
-                </div>
-
-                <div class="portfolio-item" data-category="websites">
-                    <div class="portfolio-image">
-                        <img src="images/work/work102.JPG" alt="惡靈古堡資料庫">
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-overlay-content">
-                                <h3>惡靈古堡資料庫</h3>
-                                <p>遊戲及電影資料庫網站</p>
-                                <a href="http://220.132.73.120/Andy_works/Resident_Evil/" target="_blank" class="portfolio-link">
-                                    <i class="fas fa-external-link-alt"></i> 查看作品
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="portfolio-info">
-                        <span class="portfolio-category">全端網站</span>
-                        <h4>惡靈古堡資料庫</h4>
-                        <p>包含電影列表、遊戲列表、討論區等功能</p>
-                    </div>
-                </div>
-
-                <div class="portfolio-item" data-category="websites">
-                    <div class="portfolio-image">
-                        <img src="images/work/work115.jpg" alt="Andy百寶箱">
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-overlay-content">
-                                <h3>Andy百寶箱</h3>
-                                <p>整合多種實用工具的網頁工具箱</p>
-                                <a href="https://andysaystech.github.io/tools.com.tw/" target="_blank" class="portfolio-link">
-                                    <i class="fas fa-external-link-alt"></i> 查看作品
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="portfolio-info">
-                        <span class="portfolio-category">前端工具</span>
-                        <h4>Andy百寶箱</h4>
-                        <p>整合抽抽樂、計數、時間管理、匯率轉換、待辦清單等日常實用工具</p>
-                    </div>
-                </div>
-
-                <div class="portfolio-item" data-category="websites">
-                    <div class="portfolio-image">
-                        <img src="images/work/work116.jpg" alt="Andy新北輕軌即時時刻">
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-overlay-content">
-                                <h3>Andy新北輕軌即時時刻</h3>
-                                <p>新北輕軌各站發車時刻查詢</p>
-                                <a href="https://andysaystech.github.io/newtaipeilrt.com.tw/" target="_blank" class="portfolio-link">
-                                    <i class="fas fa-external-link-alt"></i> 查看作品
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="portfolio-info">
-                        <span class="portfolio-category">前端工具</span>
-                        <h4>Andy新北輕軌即時時刻</h4>
-                        <p>提供淡海、安坑輕軌各站發車時刻，支援平日／假日自動切換</p>
-                    </div>
-                </div>
-
-                <!-- Roblox遊戲作品 -->
                 <div class="portfolio-item" data-category="games">
                     <div class="portfolio-image">
                         <img src="images/work/work114.png" alt="全能運動王">
@@ -963,6 +1137,7 @@
                         <h4>快速連結</h4>
                         <ul>
                             <li><a href="#about">關於我</a></li>
+                            <li><a href="#achievements"></a>導入成果</a></li>
                             <li><a href="#achievements">教學成果</a></li>
                             <li><a href="#certificates">專業證照</a></li>
                             <li><a href="#portfolio">作品集</a></li>
@@ -977,13 +1152,13 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.instagram.com/AndySaysTech" target="_blank" class="social-link">
-                                    <i class="fab fa-instagram"></i> <span>AndySaysTech</span>
+                                <a href="https://www.youtube.com/@AndySaysTech" target="_blank" class="social-link">
+                                    <i class="fab fa-youtube"></i> <span>AndySaysTech</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.youtube.com/@AndySaysTech" target="_blank" class="social-link">
-                                    <i class="fab fa-youtube"></i> <span>AndySaysTech</span>
+                                <a href="https://www.instagram.com/AndySaysTech" target="_blank" class="social-link">
+                                    <i class="fab fa-instagram"></i> <span>AndySaysTech</span>
                                 </a>
                             </li>
                             <li>
@@ -1006,6 +1181,7 @@
     <button class="back-to-top" id="backToTop">
         <i class="fas fa-arrow-up"></i>
     </button>
+    <div class="theme-toast" id="themeToast" role="status" aria-live="polite"></div>
 
     <script>
         console.log('=== 內嵌測試腳本開始 ===');
@@ -1110,6 +1286,29 @@
             });
             
             console.log('所有事件監聽器已設置');
+
+            var themeToggle = document.getElementById('themeToggle');
+            var themeToast = document.getElementById('themeToast');
+            var toastTimer = null;
+
+            function showThemeToast(message) {
+                if (!themeToast) return;
+                themeToast.textContent = message;
+                themeToast.classList.add('show');
+                clearTimeout(toastTimer);
+                toastTimer = setTimeout(function () {
+                    themeToast.classList.remove('show');
+                }, 1800);
+            }
+
+            if (themeToggle) {
+                themeToggle.addEventListener('click', function () {
+                    var nextTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+                    document.documentElement.setAttribute('data-theme', nextTheme);
+                    localStorage.setItem('theme', nextTheme);
+                    showThemeToast(nextTheme === 'dark' ? '已切換為深色模式' : '已切換為淺色模式');
+                });
+            }
         });
     </script>
     <script src="assets/js/instructor.js"></script>
